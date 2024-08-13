@@ -5,6 +5,7 @@ body {
     padding: 0;
     height: 100vh;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 header {
@@ -17,7 +18,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr ;
     width: 100%;
-    max-width: 1440px; /* Define uma largura máxima para o layout */
+    max-width: 1440px; 
     padding: 20px;
 }
 
@@ -26,7 +27,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 60%; /* Ocupar 60% da largura */
+    width: 60%; 
     margin-top: 90px;
     margin-left: 180px;
 }
@@ -46,7 +47,7 @@ header {
 
 .digitar::placeholder {
     color: #0A3871;
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .aviso{
@@ -77,20 +78,22 @@ header {
     gap: 24px;
 }
 
-.cripto {
+#cripto {
    border-radius: 24px;
    width: 328px;
    height: 67px;
    background-color: #0A3871;
    color: #D8DFE8;
+   cursor: pointer;
 }
 
-.descripto {
+#descripto {
     border-radius: 24px;
     width: 328px;
     height: 67px;
     background-color: #D8DFE8;
     color: #0A3871;
+    cursor: pointer;
 }
 
 .result-area {
@@ -103,18 +106,21 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
     gap: 20px;
+    overflow-y: auto;
 }
 
 .result-area img {
     width: 100%;
-    max-width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    max-width: 300px; 
+    margin: 0 auto;
 }
 
 .result-area h2 {
-    font-family: Inter;
-    font-size: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
     font-weight: 700;
     line-height: 28.8px;
     text-align: center;
@@ -122,8 +128,8 @@ header {
 }
 
 .result-area p {
-    font-family: Inter;
-    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
@@ -131,17 +137,55 @@ header {
 }
 
 .result-area button {
-    width: 150px;
-    height: 50px;
+    width: 336px;
+    height: 67px;
     background-color: #0A3871;
     color: #D8DFE8;
     border-radius: 24px;
     border: none;
     font-size: 16px;
     cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#result-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100% - 70px);
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+#output-text {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+    color: #495057;
+    width: 100%; 
+    word-wrap: break-word; 
+    text-align: center; 
 }
 
 footer {
-    padding-top: 60px;
+    padding-top: 10px;
     text-align: center;
+    color: #0A3871;
+    font-weight: 800;
 }
